@@ -1,0 +1,18 @@
+{
+	"id": "b9b5cc29-75df-4062-bd80-8796d3087189",
+	"name": "CityIntent",
+	"auto": true,
+	"webhookUsed": true,
+	"responses": [
+		{
+			"parameters": [
+				{
+					"isList": false,
+					"name": "city",
+					"value": "$city",
+					"dataType": "@sys.city"
+				}
+			]
+		}
+	]
+}

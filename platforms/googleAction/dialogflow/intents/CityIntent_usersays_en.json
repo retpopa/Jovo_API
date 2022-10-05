@@ -1,0 +1,124 @@
+[
+	{
+		"id": "e3a27604-ad14-41d0-8f33-ca408f5ee915",
+		"data": [
+			{
+				"text": "city",
+				"userDefined": true,
+				"alias": "city",
+				"meta": "@sys.city"
+			}
+		],
+		"isTemplate": false,
+		"count": 0,
+		"lang": "en"
+	},
+	{
+		"id": "906a3185-2b69-4ab9-9435-6c95b2209dba",
+		"data": [
+			{
+				"text": "I am in ",
+				"userDefined": false
+			},
+			{
+				"text": "city",
+				"userDefined": true,
+				"alias": "city",
+				"meta": "@sys.city"
+			}
+		],
+		"isTemplate": false,
+		"count": 0,
+		"lang": "en"
+	},
+	{
+		"id": "932aca32-e7fd-4951-a1cc-fb6256943942",
+		"data": [
+			{
+				"text": "what about ",
+				"userDefined": false
+			},
+			{
+				"text": "city",
+				"userDefined": true,
+				"alias": "city",
+				"meta": "@sys.city"
+			}
+		],
+		"isTemplate": false,
+		"count": 0,
+		"lang": "en"
+	},
+	{
+		"id": "67662f43-63bf-4e49-99e7-6565b6bc4faf",
+		"data": [
+			{
+				"text": "pollution levels in ",
+				"userDefined": false
+			},
+			{
+				"text": "city",
+				"userDefined": true,
+				"alias": "city",
+				"meta": "@sys.city"
+			}
+		],
+		"isTemplate": false,
+		"count": 0,
+		"lang": "en"
+	},
+	{
+		"id": "070a9b73-6826-4233-a614-ab17e9d344d4",
+		"data": [
+			{
+				"text": "pollution in ",
+				"userDefined": false
+			},
+			{
+				"text": "city",
+				"userDefined": true,
+				"alias": "city",
+				"meta": "@sys.city"
+			}
+		],
+		"isTemplate": false,
+		"count": 0,
+		"lang": "en"
+	},
+	{
+		"id": "6b297cd9-fb30-4165-ab0c-a76004892926",
+		"data": [
+			{
+				"text": "how polluted is ",
+				"userDefined": false
+			},
+			{
+				"text": "city",
+				"userDefined": true,
+				"alias": "city",
+				"meta": "@sys.city"
+			}
+		],
+		"isTemplate": false,
+		"count": 0,
+		"lang": "en"
+	},
+	{
+		"id": "d4e7b57b-10d5-4440-869b-6f2518fc417d",
+		"data": [
+			{
+				"text": "I want to know about ",
+				"userDefined": false
+			},
+			{
+				"text": "city",
+				"userDefined": true,
+				"alias": "city",
+				"meta": "@sys.city"
+			}
+		],
+		"isTemplate": false,
+		"count": 0,
+		"lang": "en"
+	}
+]

@@ -21,8 +21,10 @@
     "tsc": "node -v",
     "test": "jest",
     "bundle": "gulp --gulpfile node_modules/jovo-framework/gulpfile.js --cwd ./",
-    "start": "cd src && node index.js --webhook",
-    "launch": "npm start -- --launch"
+    "old-start": "cd src && node index.js --webhook",
+    "launch": "npm start -- --launch",
+    "start": "jovo3 run --watch",
+    "alexaSkill": "jovo3 build -p alexaSkill && node update-models.js alexaSkill"
   },
   "repository": {
     "type": "git",

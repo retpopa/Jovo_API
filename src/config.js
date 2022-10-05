@@ -6,12 +6,13 @@ module.exports = {
   logging: true,
 
   intentMap: {
-    'AMAZON.StopIntent': 'END',
+    "AMAZON.StopIntent": "END",
+    "AMAZON.City": "CityIntent",
   },
 
   db: {
     FileDb: {
-      pathToFile: '../db/db.json',
+      pathToFile: "../db/db.json",
     },
   },
 };

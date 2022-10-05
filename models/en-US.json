@@ -6,6 +6,19 @@
       "phrases": ["hello", "say hello", "say hello world"]
     },
     {
+      "name": "CityIntent",
+      "phrases": ["{city}", "I am in {city}", "what about {city}", "pollution levels in {city}", "pollution in {city}", "how polluted is {city}", "I want to know about {city}"],
+      "inputs": [
+        {
+          "name": "city",
+          "type": {
+            "alexa": "AMAZON.City",
+            "dialogflow": "@sys.city"
+          }
+        }
+      ]
+    },
+    {
       "name": "MyNameIsIntent",
       "phrases": ["{name}", "my name is {name}", "i am {name}", "you can call me {name}"],
       "inputs": [

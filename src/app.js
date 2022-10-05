@@ -29,8 +29,14 @@ app.setHandler({
   //     c. Add the input type 'AMAZON.City'
   //
 
-  LAUNCH() {
+  async LAUNCH() {
     // hello
+    this.$user.$data.city;
+    if (city) {
+      const pollutionLevel = await getPollutionByCity(city);
+      this.tell(`In ${city} the pollution level is ${pollutionLevel}`);
+    }
+
     return this.ask(
       "Welcome to Pollution Checker. What city would you like to know about?"
     );
@@ -38,26 +44,21 @@ app.setHandler({
 
   async CityIntent() {
     const city = this.$inputs.city.value; // what the user said
-
+    this.$user.$data.city = city;
     if (city) {
       // check user input exists
 
       // if city exists, send API request
-      const responseData = await getPollutionByCity(city);
+      console.log("city=okay:");
+      const pollutionLevel = await getPollutionByCity(city);
 
       console.log("API response:");
-      console.log(responseData);
-
-      return this.tell("Sent API request");
+      console.log(pollutionLevel);
+      return this.tell(`In ${city} the pollution level is ${pollutionLevel}`);
     } else {
       return this.toIntent("Unhandled"); // resolve bar requests
     }
-
-    // this.$session.$data.city = getCity();
-    // console.log(this.$session.$data.city);
-    // this.tell(this.$session.$data.city);
   },
-
   MyNameIsIntent() {
     console.log(this.$inputs);
     this.tell("Hey " + this.$inputs.name.value + ", nice to meet you!");
@@ -71,9 +72,19 @@ async function getPollutionByCity(city) {
     json: true, // Automatically parses the JSON string in the response
   };
   const data = await requestPromise(options);
-  const quote = data.forecast.daily.pm25;
+  //console.log(`DATA FROM API: ${data}`);
+  //console.log(`DATA FROM API: ${JSON.stringify(data)}`);
 
-  return quote;
+  //console.log(`DATA TIME FROM API: ${data.time}`);
+
+  var aqi = data.data.aqi;
+  if (aqi < 50) aqi = "good";
+  else if (aqi < 100) aqi = "moderate";
+  else if (aqi < 150) aqi = "unhealthy for sensetive groups";
+  else if (aqi < 200) aqi = "unhealthy";
+  else if (aqi < 300) aqi = "very unhealthy";
+  else aqi = "hazardous";
+  return aqi;
 }
 
 // HelloWorldIntent() {
